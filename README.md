@@ -31,6 +31,10 @@ Feito isso, acesse o projeto:
 ```
 cd sales-project-backend
 ```
+É preciso executar o build do projeto para criação do arquivo .jar para a dockerização
+```bash
+mvn clean package
+```
 É preciso executar o docker-compose para subir os containers
 ```bash
 docker-compose up
