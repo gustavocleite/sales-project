@@ -1,0 +1,38 @@
+project:
+  name: '@project.artifactId@'
+  version: '@project.version@'
+  description: '@project.description@'
+
+info:
+  build:
+    artifact: "@project.artifactId@"
+    name: "@project.name@"
+    description: '@project.description@'
+    version: '@project.version@'
+
+spring:
+  datasource:
+    url: jdbc:postgresql://postgres:5432/dbsales
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  flyway:
+    enabled: true
+    url: jdbc:postgresql://postgres:5432/dbsales
+    user: postgres
+    password: postgres
+    locations: classpath:db/migration
+
+logging:
+  level:
+    com.com.project.sales: debug
+    org.springframework.web: info
+
+api:
+  security:
+    token:
+      secret: ${JWT_SECRET:my-secret-key}
