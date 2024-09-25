@@ -20,32 +20,22 @@ PostgreSQL 42.7.3
 Maven 3.9.6 
 ```
 
-## Preparando ambiente
-
-É necessário a criação da base de dados relacional no Postgres
-
-```
-CREATE DATABASE "product";
-```
 
 ## Instalação da aplicação
 
 Primeiramente, faça o clone do repositório:
 ```
-git clone https://gustavocamargol@bitbucket.org/cilia-tecnologia-assesments/projeto-java-gustavo-camargo.git
+git clone https://github.com/gustavocleite/sales-project.git
 ```
 Feito isso, acesse o projeto:
 ```
-cd project-test-java\sales-project-backend
+cd sales-project-backend
 ```
-É preciso compilar o código e baixar as dependências do projeto:
+É preciso executar o docker-compose para subir os containers
+```bash
+docker-compose up
 ```
-mvn clean package
-```
-Finalizado esse passo, vamos iniciar a aplicação:
-```
-mvn spring-boot:run
-```
+
 Pronto. A aplicação está disponível em http://localhost:8080
 
 # APIs
